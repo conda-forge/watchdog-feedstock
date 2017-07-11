@@ -11,6 +11,18 @@ Summary: Filesystem events monitoring
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/watchdog-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/watchdog-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/watchdog-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/watchdog-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/watchdog-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/watchdog-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/watchdog/badges/version.svg)](https://anaconda.org/conda-forge/watchdog)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/watchdog/badges/downloads.svg)](https://anaconda.org/conda-forge/watchdog)
+
 Installing watchdog
 ===================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `watchdog` available on your platf
 ```
 conda search watchdog --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/watchdog-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/watchdog-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/watchdog-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/watchdog-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/watchdog-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/watchdog-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/watchdog/badges/version.svg)](https://anaconda.org/conda-forge/watchdog)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/watchdog/badges/downloads.svg)](https://anaconda.org/conda-forge/watchdog)
 
 
 Updating watchdog-feedstock
