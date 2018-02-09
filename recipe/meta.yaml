@@ -15,7 +15,7 @@ source:
   patches:
     - 0001-setsid-macos-error.patch
 build:
-  number: 0
+  number: 1
   entry_points:
     - watchmedo = watchdog.watchmedo:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
