@@ -15,13 +15,15 @@ source:
   patches:
     - 0001-setsid-macos-error.patch
 build:
-  number: 1
+  noarch: python
+  number: 2
   entry_points:
     - watchmedo = watchdog.watchmedo:main
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
   run:
