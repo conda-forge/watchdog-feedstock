@@ -16,7 +16,7 @@ source:
     - 0001-setsid-macos-error.patch
 build:
   noarch: python
-  number: 2
+  number: 3
   entry_points:
     - watchmedo = watchdog.watchmedo:main
   script: python -m pip install --no-deps --ignore-installed .
