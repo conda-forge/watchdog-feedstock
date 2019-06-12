@@ -13,8 +13,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  noarch: python
-  number: 0
+  number: 1
   entry_points:
     - watchmedo = watchdog.watchmedo:main
   script: python -m pip install --no-deps --ignore-installed .
@@ -38,6 +37,7 @@ test:
     - watchdog.utils
   commands:
     - watchmedo --help
+    - test -f $SP_DIR/_watchdog_fsevents.so  # [osx]
 
 about:
   home: http://github.com/gorakhargosh/watchdog
