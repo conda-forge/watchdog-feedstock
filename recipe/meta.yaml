@@ -37,7 +37,7 @@ test:
     - watchdog.utils
   commands:
     - watchmedo --help
-    - test -f $SP_DIR/_watchdog_fsevents.so  # [osx]
+    - test -f $SP_DIR/_watchdog_fsevents.so  # [osx and py2k]
 
 about:
   home: http://github.com/gorakhargosh/watchdog
