@@ -38,6 +38,7 @@ test:
   commands:
     - watchmedo --help
     - test -f $SP_DIR/_watchdog_fsevents.so  # [osx and py2k]
+    - test -f $SP_DIR/_watchdog_fsevents.cpython-37m-darwin.so  # [osx and py==37]
 
 about:
   home: http://github.com/gorakhargosh/watchdog
