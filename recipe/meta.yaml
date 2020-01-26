@@ -1,7 +1,7 @@
 {% set name = "watchdog" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "965f658d0732de3188211932aeb0bb457587f04f63ab4c1e33eab878e9de961d" %}
+{% set hash = "8e800496cdfb921cfdc62b58a11966d0d2203a35dc005b4b5b8e1ab3097b2eb5" %}
 
 package:
   name: {{ name|lower }}
@@ -13,10 +13,10 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - watchmedo = watchdog.watchmedo:main
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
