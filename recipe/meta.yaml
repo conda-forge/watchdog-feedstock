@@ -13,12 +13,14 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - watchmedo = watchdog.watchmedo:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
+  build:
+    - {{ compiler('c') }}  # [osx]
   host:
     - pip
     - python
@@ -28,17 +30,22 @@ requirements:
     - argh >=0.24.1
     - pathtools >=0.1.1
     - pyyaml >=3.10
+    - pyobjc-framework-cocoa >=4.2.2  # [osx]
+    - pyobjc-framework-fsevents >=4.2.2  # [osx]
 
 test:
+  requires:
+    - pip
   imports:
     - watchdog
     - watchdog.observers
+    - watchdog.observers.fsevents  # [osx]
     - watchdog.tricks
     - watchdog.utils
+    - _watchdog_fsevents  # [osx]
   commands:
+    - python -m pip check
     - watchmedo --help
-    - test -f $SP_DIR/_watchdog_fsevents.so  # [osx and py2k]
-    - test -f $SP_DIR/_watchdog_fsevents.cpython-37m-darwin.so  # [osx and py==37]
 
 about:
   home: http://github.com/gorakhargosh/watchdog
