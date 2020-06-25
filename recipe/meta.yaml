@@ -1,7 +1,6 @@
 {% set name = "watchdog" %}
-{% set version = "0.10.2" %}
-{% set hash_type = "sha256" %}
-{% set hash = "c560efb643faed5ef28784b2245cf8874f939569717a4a12826a173ac644456b" %}
+{% set version = "0.10.3" %}
+{% set hash = "4214e1379d128b0588021880ccaf40317ee156d4603ac388b9adcf29165e0c04" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   number: 0
@@ -49,7 +48,7 @@ about:
   home: http://github.com/gorakhargosh/watchdog
   license: Apache 2.0
   license_file: LICENSE
-  summary: 'Filesystem events monitoring'
+  summary: Filesystem events monitoring
   doc_url: http://pythonhosted.org/watchdog
 
 extra:
