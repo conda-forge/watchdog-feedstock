@@ -1,6 +1,6 @@
 {% set name = "watchdog" %}
-{% set version = "0.10.3" %}
-{% set hash = "4214e1379d128b0588021880ccaf40317ee156d4603ac388b9adcf29165e0c04" %}
+{% set version = "0.10.4" %}
+{% set hash = "e38bffc89b15bafe2a131f0e1c74924cf07dcec020c2e0a26cccd208831fcd43" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - watchmedo = watchdog.watchmedo:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
