@@ -27,7 +27,6 @@ requirements:
   run:
     - python
     - argh >=0.24.1
-    - pathtools >=0.1.1
     - pyyaml >=3.10
 
 test:
