@@ -1,6 +1,6 @@
 {% set name = "watchdog" %}
-{% set version = "2.0.1" %}
-{% set hash = "0d1c763652c255e2af00d76cf7d05c7b4867e960092b2696db031f69661c0785" %}
+{% set version = "2.0.2" %}
+{% set hash = "532fedd993e75554671faa36cd04c580ced3fae084254a779afbbd8aaf00566b" %}
 
 package:
   name: {{ name|lower }}
