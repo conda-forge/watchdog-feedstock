@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - watchmedo = watchdog.watchmedo:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -28,7 +28,6 @@ requirements:
     - setuptools
   run:
     - python
-    - argh >=0.24.1
     - pyyaml >=3.10
 
 test:
