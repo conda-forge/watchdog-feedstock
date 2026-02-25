@@ -1,0 +1,72 @@
+schema_version: 1
+
+context:
+  version: 6.0.0
+
+package:
+  name: watchdog
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/w/watchdog/watchdog-${{ version }}.tar.gz
+  sha256: 9ddf7c82fda3ae8e24decda1338ede66e1c99883db93711d8fb941eaa2d8c282
+
+build:
+  number: 3
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - watchmedo = watchdog.watchmedo:main
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+    - if: osx
+      then: ${{ compiler('c') }}
+    - if: osx
+      then: ${{ stdlib("c") }}
+  host:
+    - pip
+    - python
+    - setuptools
+  run:
+    - python
+    - pyyaml >=3.10
+
+tests:
+  - python:
+      imports:
+        - watchdog
+        - watchdog.observers
+        - if: osx
+          then: watchdog.observers.fsevents
+        - watchdog.tricks
+        - watchdog.utils
+        - if: osx
+          then: _watchdog_fsevents
+  - requirements:
+      run:
+        - pip
+    script:
+      - python -m pip check
+      - watchmedo --help
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Filesystem events monitoring
+  homepage: http://github.com/gorakhargosh/watchdog
+  repository: http://github.com/gorakhargosh/watchdog
+  documentation: http://pythonhosted.org/watchdog
+
+extra:
+  recipe-maintainers:
+    - goanpeca
+    - rlaverde
+    - ccordoba12
+    - andfoy
+    - tschoonj
+    - xhochy
