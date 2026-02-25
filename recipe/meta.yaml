@@ -1,18 +1,16 @@
 {% set name = "watchdog" %}
 {% set version = "4.0.2" %}
-{% set hash = "b4dfbb6c49221be4535623ea4474a4d6ee0a9cef4a80b20c28db4d858b64e270" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ hash }}
+  sha256: b4dfbb6c49221be4535623ea4474a4d6ee0a9cef4a80b20c28db4d858b64e270
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - watchmedo = watchdog.watchmedo:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
