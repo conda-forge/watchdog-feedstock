@@ -416,4 +416,5 @@ Feedstock Maintainers
 * [@goanpeca](https://github.com/goanpeca/)
 * [@rlaverde](https://github.com/rlaverde/)
 * [@tschoonj](https://github.com/tschoonj/)
+* [@xhochy](https://github.com/xhochy/)
 
