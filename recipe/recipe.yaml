@@ -12,7 +12,7 @@ source:
   sha256: 9ddf7c82fda3ae8e24decda1338ede66e1c99883db93711d8fb941eaa2d8c282
 
 build:
-  number: 3
+  number: 4
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
     entry_points:
@@ -21,13 +21,13 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
+      then:
+        - python
+        - cross-python_${{ target_platform }}
     - if: osx
-      then: ${{ compiler('c') }}
-    - if: osx
-      then: ${{ stdlib("c") }}
+      then:
+        - ${{ compiler('c') }}
+        - ${{ stdlib("c") }}
   host:
     - pip
     - python
