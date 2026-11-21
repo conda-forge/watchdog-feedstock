@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "7.1.0"
+  version: "7.1.1"
 
 package:
   name: watchdog
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/w/watchdog/watchdog-${{ version }}.tar.gz
-  sha256: d3861e255416f49a1384474cb2efa097de165fb330d4c5432ce6708b509ed922
+  sha256: d7dc3bf0c3417c002ee976e958479c54d8ca18cbb3532fadbe69511fa389da15
 
 build:
-  number: 1
+  number: 0
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
     entry_points:
