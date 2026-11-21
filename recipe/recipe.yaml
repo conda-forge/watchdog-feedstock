@@ -12,7 +12,7 @@ source:
   sha256: d3861e255416f49a1384474cb2efa097de165fb330d4c5432ce6708b509ed922
 
 build:
-  number: 0
+  number: 1
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
     entry_points:
